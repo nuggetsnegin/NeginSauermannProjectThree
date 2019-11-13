@@ -1,0 +1,68 @@
+.wrapper {
+    background-image: url(../assets/cat.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    width: 500px;
+}
+
+.catBody{
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+    "head back tail"
+    "frontLegs belly backLegs";
+}
+
+.head{
+    width: 230px;
+    height: 250px;
+    background-color: pink;
+    opacity: 50%;
+    grid-area: head;
+}
+
+.back{
+    width: 100px;
+    height: 250px;
+    background-color: green;
+    opacity: 50%;
+    grid-area: back;
+}
+
+.tail{
+    width: 200px;
+    height: 250px;
+    background-color: yellow;
+    opacity: 50%;
+    grid-area: tail;
+}
+
+.frontLegs{
+    width: 230px;
+    height: 200px;
+    background-color:orange;
+    opacity: 50%;
+    grid-area: frontLegs;
+}
+
+.belly{
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+    opacity: 50%;
+    grid-area: belly;
+}
+
+.backLegs{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    opacity: 50%;
+    grid-area: backLegs;
+}
+
+h1,h2{
+    font-size: 2rem;
+    text-align: center;
+}

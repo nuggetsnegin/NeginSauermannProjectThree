@@ -5,81 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Feline Feeling</title>
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
-
-<style>
-    .wrapper {
-        background-image: url(cat.png);
-        background-repeat: no-repeat;
-        margin: 0 auto;
-        width: 500px;
-    }
-
-    .catBody{
-        display: grid;
-        grid-template-columns: repeat(2, min-content);
-        grid-template-rows: repeat(3, min-content);
-        grid-template-areas:
-        "head back tail"
-        "frontLegs belly backLegs";
-    }
-
-    .head{
-        width: 230px;
-        height: 250px;
-        background-color: pink;
-        opacity: 50%;
-        grid-area: head;
-    }
-
-    .back{
-        width: 100px;
-        height: 250px;
-        background-color: green;
-        opacity: 50%;
-        grid-area: back;
-    }
-
-    .tail{
-        width: 200px;
-        height: 250px;
-        background-color: yellow;
-        opacity: 50%;
-        grid-area: tail;
-    }
-
-    .frontLegs{
-        width: 230px;
-        height: 200px;
-        background-color:orange;
-        opacity: 50%;
-        grid-area: frontLegs;
-    }
-
-    .belly{
-        width: 100px;
-        height: 200px;
-        background-color: blue;
-        opacity: 50%;
-        grid-area: belly;
-    }
-
-    .backLegs{
-        width: 200px;
-        height: 200px;
-        background-color: red;
-        opacity: 50%;
-        grid-area: backLegs;
-    }
-
-</style>
 
 <body>
 
     <h1>FELINE FEELING</h1>
-    <div class="timer" id="timer">TIME REMAINING: </h2>
+    <div class="timer" id="timer"><h2>TIME REMAINING:</h2></div>
+    <div class="happiness" id="happiness"><h2>Happiness: 0 </h2></div>
     <div class="wrapper">
         <div class="catBody">
             <div class="head" data-part="head"></div>
@@ -89,7 +24,7 @@
             <div class="belly" data-part="belly"></div>
             <div class="backLegs" data-part="backLegs"></div>
         </div>
-    </div>
+
 
 
     <script src="script.js"></script>

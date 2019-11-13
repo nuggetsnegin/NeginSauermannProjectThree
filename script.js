@@ -1,4 +1,5 @@
-$(function () {/*check if dom is ready*/
+$(function () {
+    /*check if dom is ready*/
 
     /*cat game object, has happy level which starts at 0 and will be incremented later
     has an array of the cat body which will be selected during randomizer method*/
@@ -9,21 +10,22 @@ $(function () {/*check if dom is ready*/
         favoriteBodyPart: null
     }
 
-    let timer = 30;
-    const timerId = setInterval(countdown, 1000);
-    const elem = document.getElementById('timer');
+    let timer = 30; /*set timer maximum*/
+    const timerSpeed = setInterval(countdown, 1000); /*how quickly it countsdown, 1 second*/
+    const timerDiv = document.getElementById('timer'); /*find timer div to display timer*/
 
     function countdown() {
         if (timer == 0) {
-            clearTimeout(timerId);
-            elem.innerHTML = 'Out of time!';
+            /*when 0 change html to show out of time*/
+            clearTimeout(timerSpeed);
+            timerDiv.innerHTML = `<h2> out of time! </h2>`;
+            return 'noTime';
         } else {
-            elem.innerHTML = timer + ' seconds remaining';
-            timer--;
+            timerDiv.innerHTML = `<h2> ${timer} seconds remaining</h2>`;
+            timer--; /*reduce countdown*/
+            return 'gotTime';
         }
     }
-    countdown();
-
 
     const getRandomBodyPart = (catBody) => {
         /*goes from 0 to 5 to correspond with array elements of catBody*/
@@ -37,10 +39,9 @@ $(function () {/*check if dom is ready*/
     const pet = () => {
         /*get cadBody div and find all its children and set it to catBodyContainer*/
         const catBodyContainer = $(".catBody").children();
+        const happinessDiv = document.getElementById('happiness'); /*find timer div to display timer*/
         console.log(catBodyContainer);
 
-        /*iterating through the array catBodyContainer and finding all
-        its children elements i.e. head, back, tail*/
         for (let i = 0; i < catBodyContainer.length; i++) {
             $(catBodyContainer[i]).click(function () {
                 let petting = $(catBodyContainer[i]).data().part;
@@ -48,17 +49,19 @@ $(function () {/*check if dom is ready*/
 
                 if (petting === catGame.favoriteBodyPart) {
                     catGame.correctPetCount++; /*tracking correct pets*/
-                    console.log(`CORRECT PET COUNT ${catGame.correctPetCount}`);
+                    // console.log(`CORRECT PET COUNT ${catGame.correctPetCount}`);
                     catGame.happiness++; /*adding to cat happiness level*/
-                    console.log(`HAPPINESS: ${catGame.happiness}`);
+                    happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                     if (catGame.happiness === 10) {
                         /*win condition*/
                         console.log('You win!'); /*game win screen*/
                     }
 
                     if (catGame.correctPetCount == 1) {
-                        catGame.correctPetCount = 0; /*must set to 0 again or else it never randomizes again*/
-                        catGame.favoriteBodyPart = getRandomBodyPart(catGame.catBody); /*randomize catBody part again*/
+                        /*must set to 0 again or else it never randomizes again*/
+                        catGame.correctPetCount = 0;
+                        /*randomize catBody part again*/
+                        catGame.favoriteBodyPart = getRandomBodyPart(catGame.catBody);
                     }
                 }
 
@@ -66,6 +69,7 @@ $(function () {/*check if dom is ready*/
         }
     }
     pet();
+    countdown();
 
 
 
