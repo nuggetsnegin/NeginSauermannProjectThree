@@ -9,6 +9,21 @@ $(function () {/*check if dom is ready*/
         favoriteBodyPart: null
     }
 
+    let timer = 30;
+    const timerId = setInterval(countdown, 1000);
+    const elem = document.getElementById('timer');
+
+    function countdown() {
+        if (timer == 0) {
+            clearTimeout(timerId);
+            elem.innerHTML = 'Out of time!';
+        } else {
+            elem.innerHTML = timer + ' seconds remaining';
+            timer--;
+        }
+    }
+    countdown();
+
 
     const getRandomBodyPart = (catBody) => {
         /*goes from 0 to 5 to correspond with array elements of catBody*/
@@ -52,21 +67,6 @@ $(function () {/*check if dom is ready*/
     }
     pet();
 
-
-    let timer = 30;
-    let timerId = setInterval(countdown, 1000);
-    let elem = document.getElementById('timer');
-
-    const countdown = () => {
-        if (timer == 0) {
-            clearTimeout(timerId);
-            console.log('out of time!!');
-        } else {
-            elem.innerHTML = timer + ' seconds remaining';
-            timer--;
-        }
-    }
-    countdown();
 
 
 });
