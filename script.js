@@ -49,6 +49,3 @@ const pet = () => {
 }
 pet();
 
-
-/*this will call the bodyRandomize function with the parameter of catBody inside catGame.stats*/
-
