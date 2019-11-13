@@ -1,0 +1,62 @@
+++FELINE FEELINGS++
+
+GAME: 
+goal is to pet cat in correct location, 6 locations to pet cat, only one will give cat happy points, for a total of 
+10 happy points! After two correct pets -> randomize petting area!
+If user reaches 10 points winner! If user does not reach 10 points they lose. :(
+
+    CREATE cat OBJECT with these properties:
+     	 array of 6 elements: cat{head, back, tail, frontLegs, backLegs, tail}
+        happy: 0 (show this on screen, left hand side)
+     
+     CREATE a randomizer METHOD (in cat object) which will:
+            use math.random() + math.floor(to round) (0-5)-> to select one part of the array 
+	     //i.e. math.random() gets 1 -> which is the back and that is where the cat purfurs being pet!
+            
+
+IMG of cat (split into 6 parts and each assigned to a div -> correspond to cat object)
+
+
+ON REFRESH/PAGELOAD -> button to 'start' game with instructions   
+        on mouseover + click (or touch on mobile) user pets cat
+	    IF user pets cat in correct spot 
+		++ to cat points (cat.happy())
+   		after 2 correct pets - call randomizer method --> randomize area again
+     		IF user reaches 10 points 
+			see winning screen!
+       	ELSE
+		 user did not pet cat to goal happiness :(
+		 game over screen
+		 refresh page to play again
+
+ASSETS:
+   cat image (my drawings!) split into 6 img divs (in a css grid using grid-template-areas (2x3 grid)):
+									   head back tail
+									   front-legs belly back-legs
+     
+        +start screen with instructions
+	 +cat happy face ~(head img), occurs when pet correctly + correct spot 
+	 +cat sad face ~(head img), occurs when pet incorrectly + incorrect spot 
+        +game over screen (if >60 seconds & under 10pts)
+        +game winning screen (if 10pts in <60 seconds)
+        +instructions on the right side (in html+css)
+
+
+FOR RESPONSIVENESS:
+	+cat/play area in a container
+	+cat images in a css grid
+	+resize with % for container
+	+for mobile: set mouseover to touch
+	+stack instructions + play area on mobile
+ 
+           
+STRETCH GOALS:
+    +60 second timer 
+    +toggle button (switches how the cat will be pet (up & down petting, left & right petting, circular petting??)
+    +make image into a map (coordinates for each area ~ more responsive/better error handling of white space)
+    +keydown instead of toggle (more key binds/methods to pet ~ unsure how to apply for mobile)
+    +leaderboards
+    +more cats!
+    +more animations
+    +sound effects
+    
