@@ -66,3 +66,20 @@ h1,h2{
     font-size: 2rem;
     text-align: center;
 }
+
+button {
+    background-color: rgb(216, 104, 125); /* Green */
+    border: none;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 2rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    margin: 5% auto;
+    &:hover{
+        background-color: black;
+    }
+  }

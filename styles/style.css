@@ -262,3 +262,24 @@ h1, h2 {
   font-size: 2rem;
   text-align: center;
 }
+
+button {
+  background-color: #d8687d;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  margin: 5% auto;
+}
+
+button:hover {
+  background-color: black;
+}
