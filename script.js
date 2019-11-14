@@ -124,8 +124,7 @@ $(function () {
                 } else if (petting === catGame.butthole) {
                     /*touched the butt*/
                     catGame.happiness = -1000;
-                    $('.happiness').hide();
-                    catGame.timerDiv.innerHTML = `<h2>YOU TOUCHED THE BUTTHOLE 😱!</h2>`;
+                    catGame.timerDiv.innerHTML = `HAPPINESS: - 1000 😱!`;
                     checkHappiness();
 
                 } else if (petting !== catGame.favoriteBodyPart) {
