@@ -57,6 +57,8 @@ $(function () {
     const feelingFeline = () => {
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
             $(catGame.catBodyPart[i]).on("click", function () {
+                $(".catBody").removeClass("yes");
+                $(".catBody").removeClass("no");
                 let petting = $(catGame.catBodyPart[i]).data().part;
 
                 if (petting === catGame.favoriteBodyPart) {
@@ -65,6 +67,11 @@ $(function () {
                     catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                     checkHappiness();
                     changeFavoriteSpot();
+                    $(".catBody").addClass("yes");
+                }
+                else{
+                    $(".catBody").addClass("no");
+                    
                 }
             });
         }
@@ -85,9 +92,6 @@ $(function () {
             if (catGame.correctPetCount == 1) {
                 catGame.correctPetCount = 0; /*must set to 0 again or else it never randomizes again*/
                 catGame.setRandomBody(); /*get random body part*/
-
-                $('.flip').toggle();
-
             }
 
         }
