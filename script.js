@@ -10,7 +10,7 @@ $(function () {
         correctPetCount: 0,
         favoriteBodyPart: null,
         timer: 0,
-        /*[COUNTDOWN FUNCTION]
+        /*[COUNTDOWN METHOD]
             Checks if timer is 0 (user ran out of petting time :( ))
             if out of time, reset the game, tell user they're out of time
             show the losing screen and hide the cat game body to prevent
@@ -27,7 +27,7 @@ $(function () {
                 catGame.timer--;
             }
         },
-        /*[DOMGETTER FUNCTION]
+        /*[DOM GETTER METHOD]
             Grabbing needed HTML elements and assigning them to variables for later
             important methods and event functionality.
         */
@@ -38,7 +38,7 @@ $(function () {
             catGame.button = document.getElementById('start');
             catGame.butthole = $('.butthole').text();
         },
-        /*[SETRANDOMBODY FUNCTION]
+        /*[SET RANDOM BODY METHOD]
             Using math.random & floor and assigning to variable random.
             Random variable (number 0-5) is now the cat's preffered petting spot (array index).
             Set THAT to favoriteBodyPart from catGame object.
@@ -47,32 +47,34 @@ $(function () {
             let random = Math.floor((Math.random() * 6));
             catGame.favoriteBodyPart = catGame.catBody[random];
         },
-        /*[SETRANDOMBODY FUNCTION]
+        /*[START METHOD]
             Game start function which starts when user clicks 'start' button.
             Set timer to 30 seconds, set happiness to 0, set timerSpeed.
         */
         start: function () {
-            $(catGame.button).click(function () {
-                catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
+            $(catGame.button).on('click touchstart', function () {
+                $('.catBody').show();
+                catGame.catBodyPart.on();
                 catGame.setRandomBody();
-                catGame.timer = 10; /*set timer to 30*/
-                catGame.happiness = 0; /*reset score*/
+                catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
+                catGame.timer = 10; 
+                catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                 catGame.hide();
-                $('.catBody').show();
             });
         },
+        /*[HIDE METHOD]
+            Elements to hide when using starting game.
+        */
         hide: function () {
             $('.instructions').hide();
             $('.winning-screen').hide();
             $('.losing-screen').hide();
             $(catGame.button).hide(); /*so user doesnt spam button*/
-
         },
         reset: function () {
-            $(catGame.button).show().text('play again?');
             clearTimeout(catGame.timerSpeed); /*stop timer*/
-            catGame.catBodyPart.off(); /*cannot click catBody*/
+            $(catGame.button).show().text('play again?');
         },
         init: function () {
             $('.catBody').hide();
@@ -83,10 +85,8 @@ $(function () {
     }
     const feelingFeline = () => {
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
-            $(catGame.catBodyPart[i]).on("click", function () {
+            $(catGame.catBodyPart[i]).on('click touchstart', function () {
                 let petting = $(catGame.catBodyPart[i]).data().part;
-                console.log(catGame.petting);
-                console.log(catGame.happiness);
 
                 if (petting === catGame.favoriteBodyPart) {
                     catGame.correctPetCount++; /*tracking correct pets*/
@@ -99,28 +99,40 @@ $(function () {
                     catGame.happiness = -1000;
                     catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                     catGame.timerDiv.innerHTML = `<h2>YOU TOUCHED THE BUTTHOLE 😱!</h2>`;
-                    console.log(catGame.happiness);
                     checkHappiness();
-                } else
-                    console.log("wrong body part");
+
+                } else {
+                    console.log(`wrong body part`);
+                    checkHappiness();
+                }
 
             })
         };
     }
 
+    /*[CHECK HAPPINESS LEVEL FUNCTION]
+        Check to see if happiness level is max -> game win screen
+        Else check to see if happiness level is negative -> touched the butthole
+        and end the game.
+    */
     const checkHappiness = () => {
         if (catGame.happiness === 3) {
-            /*you win!*/
             catGame.happinessDiv.innerHTML = `<h2>You win! </h2>`;
             catGame.timerDiv.innerHTML = `<h2> You finished with ${catGame.timer} seconds remaining!</h2>`
-            $('.winning-screen').show();
             $('.catBody').hide();
+            $('.winning-screen').show();
+            catGame.catBodyPart.off(); /*cannot click catBody*/
             catGame.reset();
         } else if (catGame.happiness < 0) {
+            catGame.catBodyPart.off(); /*cannot click catBody*/
             catGame.reset();
         }
     }
 
+    /*[CHANGE FAVORITE SPOT FUNCTION]
+        When user gets a correct pet, randomize the petting spot again
+        and reset the correct pet count.
+    */
     const changeFavoriteSpot = () => {
         if (catGame.correctPetCount == 1) {
             catGame.correctPetCount = 0; /*must set to 0 again or else it never randomizes again*/
