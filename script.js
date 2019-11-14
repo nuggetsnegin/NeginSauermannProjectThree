@@ -72,10 +72,18 @@ $(function () {
             $('.losing-screen').hide();
             $(catGame.button).hide(); /*so user doesnt spam button*/
         },
+        /*[RESET METHOD]
+            Stop timer and show button again and
+            change button from 'start' to 'play again'.
+        */
         reset: function () {
             clearTimeout(catGame.timerSpeed); /*stop timer*/
             $(catGame.button).show().text('play again?');
         },
+        /*[INIT METHOD]
+            When we load page, hide the cat body call
+            DOM getter, start game and the game logic.
+        */
         init: function () {
             $('.catBody').hide();
             catGame.domGetter();
@@ -83,6 +91,14 @@ $(function () {
             feelingFeline();
         }
     }
+
+    /*[FEELING FELINE FUNCTION]
+        Game logic. Checks user clicks, if it matches random
+        body part add to the correct pet count, increase happiness
+        and call bodypart randomizer.
+        Also call happiness function to see if user has won or if user has
+        lost and clicked the butthole.
+    */
     const feelingFeline = () => {
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
             $(catGame.catBodyPart[i]).on('click touchstart', function () {
