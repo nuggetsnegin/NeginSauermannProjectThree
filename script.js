@@ -34,6 +34,7 @@ $(function () {
         domGetter: function () {
             catGame.timerDiv = document.getElementById('timer');
             catGame.happinessDiv = document.getElementById('happiness');
+            catGame.heart = document.getElementsByClassName('hearts');
             catGame.catBodyPart = $('.catBody').children();
             catGame.button = document.getElementById('start');
             catGame.butthole = $('.butthole').text();
@@ -53,11 +54,11 @@ $(function () {
         */
         start: function () {
             $(catGame.button).on('click touchstart', function () {
+                console.log('am i working');
                 $('.catBody').show();
-                catGame.catBodyPart.on();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 10;
+                catGame.timer = 100;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                 catGame.hide();
@@ -98,13 +99,22 @@ $(function () {
         and call bodypart randomizer.
         Also call happiness function to see if user has won or if user has
         lost and clicked the butthole.
+        Lastly, remove animation on end outside of for loop so animations
+        work on click and duplicate clicks.
     */
     const feelingFeline = () => {
-        for (let i = 0; i < catGame.catBodyPart.length; i++) {
-           let test = $(catGame.catBodyPart[i]).on('click touchstart', function () {
-                let petting = $(catGame.catBodyPart[i]).data().part;
 
+        $('.catBody').on("animationend", function(){
+            $(this).removeClass('no yes');
+        });
+
+        for (let i = 0; i < catGame.catBodyPart.length; i++) {
+           $(catGame.catBodyPart[i]).on('click touchstart', function () {
+                //         $(this).removeClass('no');
+                let petting = $(catGame.catBodyPart[i]).data().part;
+                console.log(petting);
                 if (petting === catGame.favoriteBodyPart) {
+                    $('.catBody').addClass('yes');
                     catGame.correctPetCount++; 
                     catGame.happiness++; 
                     catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
@@ -118,11 +128,12 @@ $(function () {
                     catGame.timerDiv.innerHTML = `<h2>YOU TOUCHED THE BUTTHOLE 😱!</h2>`;
                     checkHappiness();
 
-                } else {
+                } else if (petting !== catGame.favoriteBodyPart) {
                     console.log(`wrong body part`);
                     checkHappiness();
+                    $('.catBody').addClass('no');
                 }
-
+                else console.log('error');
             })
         };
     }
@@ -139,10 +150,8 @@ $(function () {
             catGame.timerDiv.innerHTML = `<h2> You finished with ${catGame.timer} seconds remaining!</h2>`
             $('.catBody').hide();
             $('.winning-screen').show();
-            catGame.catBodyPart.off();
             catGame.reset();
         } else if (catGame.happiness < 0) {
-            catGame.catBodyPart.off();
             catGame.reset();
         }
     }
