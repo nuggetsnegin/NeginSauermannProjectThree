@@ -14,6 +14,11 @@
     "frontLegs belly backLegs";
 }
 
+.catFlip{
+    transform: scaleX(-1);
+}
+
+
 .head{
     width: 230px;
     height: 250px;

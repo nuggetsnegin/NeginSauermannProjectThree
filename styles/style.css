@@ -198,6 +198,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       grid-template-areas: "head back tail" "frontLegs belly backLegs";
 }
 
+.catFlip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.catFlipHorizontal {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
 .head {
   width: 230px;
   height: 250px;
