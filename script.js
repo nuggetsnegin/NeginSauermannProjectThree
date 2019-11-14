@@ -57,7 +57,7 @@ $(function () {
                 catGame.catBodyPart.on();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 10; 
+                catGame.timer = 10;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                 catGame.hide();
@@ -101,15 +101,16 @@ $(function () {
     */
     const feelingFeline = () => {
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
-            $(catGame.catBodyPart[i]).on('click touchstart', function () {
+           let test = $(catGame.catBodyPart[i]).on('click touchstart', function () {
                 let petting = $(catGame.catBodyPart[i]).data().part;
 
                 if (petting === catGame.favoriteBodyPart) {
-                    catGame.correctPetCount++; /*tracking correct pets*/
-                    catGame.happiness++; /*adding to cat happiness level*/
+                    catGame.correctPetCount++; 
+                    catGame.happiness++; 
                     catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
                     checkHappiness();
                     changeFavoriteSpot();
+                    
                 } else if (petting === catGame.butthole) {
                     /*touched the butt*/
                     catGame.happiness = -1000;
@@ -127,9 +128,10 @@ $(function () {
     }
 
     /*[CHECK HAPPINESS LEVEL FUNCTION]
-        Check to see if happiness level is max -> game win screen
+        Check to see if happiness level is max -> game win screen & call reset.
         Else check to see if happiness level is negative -> touched the butthole
-        and end the game.
+        and end the game and call reset. 
+        Lastly, prevent user from being able to click/touch on cat body using off().
     */
     const checkHappiness = () => {
         if (catGame.happiness === 3) {
@@ -137,10 +139,10 @@ $(function () {
             catGame.timerDiv.innerHTML = `<h2> You finished with ${catGame.timer} seconds remaining!</h2>`
             $('.catBody').hide();
             $('.winning-screen').show();
-            catGame.catBodyPart.off(); /*cannot click catBody*/
+            catGame.catBodyPart.off();
             catGame.reset();
         } else if (catGame.happiness < 0) {
-            catGame.catBodyPart.off(); /*cannot click catBody*/
+            catGame.catBodyPart.off();
             catGame.reset();
         }
     }
@@ -151,8 +153,8 @@ $(function () {
     */
     const changeFavoriteSpot = () => {
         if (catGame.correctPetCount == 1) {
-            catGame.correctPetCount = 0; /*must set to 0 again or else it never randomizes again*/
-            catGame.setRandomBody(); /*get random body part*/
+            catGame.correctPetCount = 0;
+            catGame.setRandomBody();
         }
 
     }
