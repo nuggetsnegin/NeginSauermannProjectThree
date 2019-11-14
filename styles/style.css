@@ -182,7 +182,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .wrapper {
   margin: 0 auto;
   width: 500px;
-  background-color: red;
 }
 
 img {
@@ -190,6 +189,10 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+}
+
+body {
+  text-align: center;
 }
 
 .catBody {
@@ -282,7 +285,12 @@ img {
   grid-area: backLegs;
 }
 
-h1, h2 {
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
   font-size: 2rem;
   text-align: center;
 }
@@ -308,8 +316,8 @@ button:hover {
   background-color: black;
 }
 
-.winning-screen,
-.losing-screen {
+.winningScreen,
+.losingScreen {
   display: none;
 }
 

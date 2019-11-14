@@ -20,7 +20,7 @@ $(function () {
             if (catGame.timer == 0) {
                 catGame.reset();
                 catGame.timerDiv.innerHTML = `<h2> out of time! </h2>`;
-                $('.losing-screen').show();
+                $('.losingScreen').show();
                 $('.catBody').hide();
             } else {
                 catGame.timerDiv.innerHTML = `<h2> ${catGame.timer} seconds remaining</h2>`;
@@ -33,8 +33,6 @@ $(function () {
         */
         domGetter: function () {
             catGame.timerDiv = document.getElementById('timer');
-            catGame.happinessDiv = document.getElementById('happiness');
-            catGame.heart = document.getElementsByClassName('hearts');
             catGame.catBodyPart = $('.catBody').children();
             catGame.button = document.getElementById('start');
             catGame.butthole = $('.butthole').text();
@@ -60,7 +58,8 @@ $(function () {
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
                 catGame.timer = 100;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
-                catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
+                $('.happiness').show();
+                $('.happiness').append(`Happiness: `);
                 catGame.hide();
             });
         },
@@ -69,8 +68,8 @@ $(function () {
         */
         hide: function () {
             $('.instructions').hide();
-            $('.winning-screen').hide();
-            $('.losing-screen').hide();
+            $('.winningScreen').hide();
+            $('.losingScreen').hide();
             $(catGame.button).hide(); /*so user doesnt spam button*/
         },
         /*[RESET METHOD]
@@ -80,6 +79,7 @@ $(function () {
         reset: function () {
             clearTimeout(catGame.timerSpeed); /*stop timer*/
             $(catGame.button).show().text('play again?');
+            $('.happiness').html(""); /*clear appended happiness so it does not stack*/
         },
         /*[INIT METHOD]
             When we load page, hide the cat body call
@@ -110,21 +110,21 @@ $(function () {
 
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
            $(catGame.catBodyPart[i]).on('click touchstart', function () {
-                //         $(this).removeClass('no');
+
                 let petting = $(catGame.catBodyPart[i]).data().part;
                 console.log(petting);
                 if (petting === catGame.favoriteBodyPart) {
                     $('.catBody').addClass('yes');
                     catGame.correctPetCount++; 
                     catGame.happiness++; 
-                    catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
+                    $('.happiness').append(`💗`);
                     checkHappiness();
                     changeFavoriteSpot();
                     
                 } else if (petting === catGame.butthole) {
                     /*touched the butt*/
                     catGame.happiness = -1000;
-                    catGame.happinessDiv.innerHTML = `<h2>Happiness: ${catGame.happiness}</h2>`;
+                    $('.happiness').hide();
                     catGame.timerDiv.innerHTML = `<h2>YOU TOUCHED THE BUTTHOLE 😱!</h2>`;
                     checkHappiness();
 
@@ -146,10 +146,10 @@ $(function () {
     */
     const checkHappiness = () => {
         if (catGame.happiness === 3) {
-            catGame.happinessDiv.innerHTML = `<h2>You win! </h2>`;
             catGame.timerDiv.innerHTML = `<h2> You finished with ${catGame.timer} seconds remaining!</h2>`
+            $('.happiness').hide();
             $('.catBody').hide();
-            $('.winning-screen').show();
+            $('.winningScreen').show();
             catGame.reset();
         } else if (catGame.happiness < 0) {
             catGame.reset();

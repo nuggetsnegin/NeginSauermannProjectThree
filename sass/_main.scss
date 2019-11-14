@@ -1,12 +1,15 @@
 .wrapper {
     margin: 0 auto;
     width: 500px;
-    background-color: red;
 }
 
 img{
     display: flex;
     margin: 0 auto;
+}
+
+body{
+    text-align: center;
 }
 
 .catBody{
@@ -83,7 +86,12 @@ img{
     grid-area: backLegs;
 }
 
-h1,h2{
+h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+h2{
     font-size: 2rem;
     text-align: center;
 }
@@ -105,7 +113,7 @@ button {
     }
   }
 
-  .winning-screen,
-  .losing-screen{
+  .winningScreen,
+  .losingScreen{
       display: none;
   }

@@ -14,34 +14,42 @@
 
     <h1>FELINE FEELING</h1>
     <div class="timer" id="timer"></div>
-    <div class="happiness" id="happiness"><h2>Happiness:</h2>
-        <div class="hearts"></div>
-    </div>
+    <div class="happiness"></div>
     <div class="wrapper">
         <!--remember alt text-->
-            <div class="instructions"><img src="./assets/instructions.png"></div>
-            <div class="catBody vibrate">
-                <div class="head" data-part="head"></div>
-                <div class="back" data-part="back"></div>
-                <div class="tail" data-part="tail"></div>
-                <div class="frontLegs" data-part="frontLegs"></div>
-                <div class="belly" data-part="belly"></div>
-                <div class="backLegs" data-part="backLegs"></div>
-                <div class="butthole" id="butthole" data-part="butthole"><span>butthole</span></div>
-            </div>
+        <div class="instructions">
+            <h2>INSTRUCTIONS</h2>
+            <ul>
+                <li>You have 15 seconds to find spots the cat likes being touched!</li>
+                <li>Cats are finnicky, so the spot will change each time.</li>
+                <li>If you touch the cat 10 times in the right spot - it's yours!</li>
+                <li>If not, it'll run away. 😨</li>
+                <li>Absolutely do NOT touch the cat's butthole!</li>
+            </ul>
         </div>
-
-        <div class="winning-screen" id="winning-screen">
-            <img src="./assets/cat-winning.gif">
+        <div class="catBody vibrate">
+            <div class="head" data-part="head"></div>
+            <div class="back" data-part="back"></div>
+            <div class="tail" data-part="tail"></div>
+            <div class="frontLegs" data-part="frontLegs"></div>
+            <div class="belly" data-part="belly"></div>
+            <div class="backLegs" data-part="backLegs"></div>
+            <div class="butthole" id="butthole" data-part="butthole"><span>butthole</span></div>
         </div>
+    </div>
 
-        <div class="losing-screen">
-            <img src="./assets/cat-sad.gif">
-        </div>
+    <div class="winningScreen" id="winningScreen">
+        <h2>You Win!</h2>
+        <img src="./assets/cat-winning.gif">
+    </div>
 
-        <button id="start">start game</button>
+    <div class="losingScreen">
+        <img src="./assets/cat-sad.gif">
+    </div>
 
-        <script src="script.js"></script>
+    <button id="start">start game</button>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
