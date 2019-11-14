@@ -1,11 +1,11 @@
 .wrapper {
-    background-image: url(../assets/cat.png);
-    background-repeat: no-repeat;
     margin: 0 auto;
     width: 500px;
 }
 
 .catBody{
+    background-image: url(../assets/cat.png);
+    background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(2, min-content);
     grid-template-rows: repeat(3, min-content);
@@ -82,4 +82,9 @@ button {
     &:hover{
         background-color: black;
     }
+  }
+
+  .winning-screen,
+  .losing-screen{
+      display: none;
   }

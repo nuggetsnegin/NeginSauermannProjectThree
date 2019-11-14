@@ -13,7 +13,7 @@
 <body>
 
     <h1>FELINE FEELING</h1>
-    <div class="timer" id="timer"><h2>TIME REMAINING:</h2></div>
+    <div class="timer" id="timer"></div>
     <div class="happiness" id="happiness"><h2>Happiness: 0 </h2></div>
     <div class="wrapper">
         <div class="catBody">
@@ -25,7 +25,15 @@
             <div class="backLegs" data-part="backLegs"></div>
         </div>
 
-    <button>start game</button>
+        <div class="winning-screen" id="winning-screen">
+            <img src="./assets/cat-winning.gif">
+        </div>
+
+        <div class="losing-screen">
+            <img src="./assets/cat-sad.gif">
+        </div>
+
+    <button id="start">start game</button>
 
     <script src="script.js"></script>
 </body>

@@ -180,13 +180,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .wrapper {
-  background-image: url(../assets/cat.png);
-  background-repeat: no-repeat;
   margin: 0 auto;
   width: 500px;
 }
 
 .catBody {
+  background-image: url(../assets/cat.png);
+  background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (min-content)[2];
@@ -282,4 +282,9 @@ button {
 
 button:hover {
   background-color: black;
+}
+
+.winning-screen,
+.losing-screen {
+  display: none;
 }
