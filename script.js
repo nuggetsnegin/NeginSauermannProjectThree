@@ -181,6 +181,11 @@ $(function () {
 
     }
 
+    /*[RANDOM CAT]
+        Randomizing cat images using an array of
+        cat images and using math.random + floor based and grabbing
+        from the array + changing the css bg image! 
+    */
     const randomCat = () =>{
         let catImage = ['cat.png', 'cat-2.png'];
         $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
