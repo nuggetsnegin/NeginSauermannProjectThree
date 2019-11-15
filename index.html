@@ -7,24 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Feline Feeling</title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-    <h1>FELINE FEELING</h1>
+    <h1><i class="fas fa-star"></i>FELINE FEELING<i class="fas fa-star"></i></h1>
     <div class="happiness"></div>
-    <div class="buttToucher"><h2>HAPPINESS: -1000</h2></div>
+    <div class="buttToucher">
+        <h2>HAPPINESS: -1000</h2>
+    </div>
     <div class="wrapper">
         <!--remember alt text-->
         <div class="instructions">
             <h2>INSTRUCTIONS</h2>
             <ul>
-                <li>You have 15 seconds to find spots the cat likes being touched!</li>
-                <li>Cats are finnicky, so the spot will change each time.</li>
-                <li>If you touch the cat 3 times in the right spot - it's yours!</li>
-                <li>Absolutely do NOT touch the cat's butthole!</li>
+                <li>You have <span class="accent">30 seconds</span> to touch the cat's purfurred spots!</li>
+                <li>Cats are <span class="accent">finicky</span>, so the spot will change each time.</li>
+                <li>If you touch the cat <span class="accent">5</span> times in the right spot - it's yours!</li>
+                <li>Absolutely <span class="accent">DO NOT</span> touch the cat's butthole!</li>
             </ul>
         </div>
         <div class="catBody vibrate">
@@ -39,7 +42,7 @@
     </div>
 
     <div class="winningScreen" id="winningScreen">
-        <h2>You Win!</h2>
+        <h2>YOU WIN!</h2>
         <img src="./assets/cat-winning.gif">
     </div>
 
@@ -47,10 +50,18 @@
         <img src="./assets/cat-sad.gif">
     </div>
 
+
+
+    <div class="buttToucher">
+        <h2>You touched the butt..</h2>
+    </div>
+
     <button id="start" class="vibrate">start game</button>
 
     <div class="timer" id="timer"></div>
-    <footer><p>Game & assets made with 💗 by Negin Sauermann</p></footer>
+    <footer>
+        <p>Game & assets made with 💗 by Negin Sauermann</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

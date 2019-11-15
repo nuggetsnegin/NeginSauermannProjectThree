@@ -1,10 +1,4 @@
 $(function () {
-    let audio = document.createElement('audio');
-    audio.setAttribute('src', './assets/gameSong.mp3');
-    let dead = document.createElement('audio');
-    dead.setAttribute('src', './assets/died.mp3');
-
-
     /*[CAT GAME OBJECT]
         Initialize happiness level, cat body part array, 
         favoriteBody part, correctPetCount counter and timer.
@@ -57,11 +51,13 @@ $(function () {
         */
         start: function () {
             $(catGame.button).on('click touchstart', function () {
+                gameOver.pause();
+                gameWin.pause();
                 audio.play();
                 $('.catBody').show();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 15;
+                catGame.timer = 30;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
@@ -128,16 +124,17 @@ $(function () {
                     $('.catBody').addClass('yes');
                     catGame.correctPetCount++;
                     catGame.happiness++;
-                    $('.happiness').append(`💗`);
+                    $('.happiness').append(`<i class="fas fa-heart"></i>`);
                     checkHappiness();
                     changeFavoriteSpot();
+                    meow.play();
 
                 } else if (petting === catGame.butthole) {
                     /*touched the butt*/
                     catGame.happiness = -1000;
-                    $('.buttToucher').show();
                     dead.play();
                     $('.catBody').addClass('youDidABadThing').fadeOut();
+                    $('.buttToucher').show();
                     checkHappiness();
 
                 } else if (petting !== catGame.favoriteBodyPart) {
@@ -155,13 +152,15 @@ $(function () {
         and end the game and call reset. 
     */
     const checkHappiness = () => {
-        if (catGame.happiness === 3) {
+        if (catGame.happiness === 5) {
             catGame.timerDiv.innerHTML = `<h2> You finished with ${catGame.timer} seconds remaining!</h2>`
             $('.happiness').hide();
             $('.catBody').hide();
             $('.winningScreen').show();
+            gameWin.play();
             catGame.reset();
         } else if (catGame.happiness < 0) {
+            gameOver.play();
             catGame.reset();
         }
     }
@@ -177,5 +176,21 @@ $(function () {
         }
 
     }
+
+    /*[AUDIO AS GLOBAL VARIABLES]
+        Audio from:
+    */
+    let audio = document.createElement('audio');
+    audio.setAttribute('src', './assets/wario.mp3');
+    audio.loop=true;
+    let dead = document.createElement('audio');
+    dead.setAttribute('src', './assets/died.mp3');
+    let meow = document.createElement('audio');
+    meow.setAttribute('src', './assets/meow.wav');
+    let gameOver = document.createElement('audio');
+    gameOver.setAttribute('src', './assets/gameOver.mp3');
+    let gameWin = document.createElement('audio');
+    gameWin.setAttribute('src', './assets/kirby.mp3');
+
     catGame.init();
 });
