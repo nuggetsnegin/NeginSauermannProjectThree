@@ -181,7 +181,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 img {
@@ -199,7 +199,6 @@ body {
 .catBody {
   background-image: url(../assets/cat.png);
   background-repeat: no-repeat;
-  width: 500px;
   display: -ms-grid;
   display: grid;
   position: relative;
@@ -246,6 +245,8 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+  background-color: pink;
+  opacity: 50%;
 }
 
 .back {
@@ -254,6 +255,8 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
+  background-color: blue;
+  opacity: 50%;
 }
 
 .tail {
@@ -262,6 +265,8 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
+  background-color: green;
+  opacity: 50%;
 }
 
 .frontLegs {
@@ -270,6 +275,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
+  background-color: orange;
+  opacity: 50%;
 }
 
 .belly {
@@ -279,6 +286,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
+  background-color: teal;
+  opacity: 50%;
 }
 
 .backLegs {
@@ -288,6 +297,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
+  background-color: purple;
+  opacity: 50%;
 }
 
 .happiness,
@@ -300,13 +311,13 @@ i {
 
 h1 {
   font-family: 'Bungee Shade', cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
-  margin: 2% auto;
+  margin: 1% auto;
 }
 
 h1 i {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -716,8 +727,5 @@ footer p {
     width: 80%;
     padding: 5px;
     margin: 0 auto;
-  }
-  .catBody {
-    background-size: 60%;
   }
 }

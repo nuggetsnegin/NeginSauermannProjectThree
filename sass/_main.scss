@@ -1,6 +1,6 @@
 .wrapper {
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 500px;
 }
 
 img {
@@ -16,7 +16,6 @@ body {
 .catBody {
     background-image: url(../assets/cat.png);
     background-repeat: no-repeat;
-    width: 500px;
     display: grid;
     position: relative;
     grid-template-columns: repeat(2, min-content);
@@ -57,24 +56,32 @@ i{
     width: 230px;
     height: 250px;
     grid-area: head;
+    background-color: pink;
+    opacity: 50%;
 }
 
 .back {
     width: 100px;
     height: 250px;
     grid-area: back;
+    background-color: blue;
+    opacity: 50%;
 }
 
 .tail {
     width: 200px;
     height: 250px;
     grid-area: tail;
+    background-color: green;
+    opacity: 50%;
 }
 
 .frontLegs {
     width: 230px;
     height: 200px;
     grid-area: frontLegs;
+    background-color: orange;
+    opacity: 50%;
 }
 
 .belly {
@@ -82,6 +89,8 @@ i{
     height: 200px;
     opacity: 50%;
     grid-area: belly;
+    background-color: teal;
+    opacity: 50%;
 }
 
 .backLegs {
@@ -89,6 +98,8 @@ i{
     height: 200px;
     opacity: 50%;
     grid-area: backLegs;
+    background-color: purple;
+    opacity: 50%;
 }
 
 .happiness,
@@ -102,11 +113,11 @@ i{
 
 h1 {
     font-family: 'Bungee Shade', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
-    margin: 2% auto;
+    margin: 1% auto;
     i{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 }
 
