@@ -197,7 +197,7 @@ body {
 }
 
 .catBody {
-  background-image: url(./assets/cat.png);
+  background-image: url(../assets/cat.png);
   background-repeat: no-repeat;
   width: 500px;
   display: -ms-grid;
@@ -219,7 +219,6 @@ body {
 
 .butthole {
   position: absolute;
-  border: 2px red solid;
   left: 74%;
   top: 60%;
   height: 20px;
@@ -247,24 +246,22 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
-  background-color: pink;
-  opacity: 50%;
 }
 
 .back {
+  width: 100px;
+  height: 250px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
-  background-color: orange;
-  opacity: 50%;
 }
 
 .tail {
+  width: 200px;
+  height: 250px;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
-  background-color: teal;
-  opacity: 50%;
 }
 
 .frontLegs {
@@ -273,8 +270,6 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
-  background-color: green;
-  opacity: 50%;
 }
 
 .belly {
@@ -284,8 +279,6 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
-  background-color: purple;
-  opacity: 50%;
 }
 
 .backLegs {
@@ -295,8 +288,6 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
-  background-color: palevioletred;
-  opacity: 50%;
 }
 
 .happiness,
@@ -725,5 +716,8 @@ footer p {
     width: 80%;
     padding: 5px;
     margin: 0 auto;
+  }
+  .catBody {
+    background-size: 60%;
   }
 }
