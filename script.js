@@ -53,7 +53,7 @@ $(function () {
         */
         start: function () {
             $(catGame.button).on('click touchstart', function () {
-                randomCat();
+                // randomCat();
                 gameOver.pause();
                 gameWin.pause();
                 audio.play();
@@ -186,10 +186,10 @@ $(function () {
     cat images and using math.random + floor based and grabbing
     from the array! changing the css bg image! 
 */
-    const randomCat = () =>{
-        let catImage = ['cat.png', 'cat-2.png'];
-        $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
-    }
+    // const randomCat = () =>{
+    //     let catImage = ['cat.png', 'cat-2.png'];
+    //     $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
+    // }
 
 
     /*[AUDIO AS GLOBAL VARIABLES]
