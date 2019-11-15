@@ -9,12 +9,12 @@ img {
 }
 
 body {
-    size: 62.5%;
+    font-size: 62.5%;
     font-family: 'Press Start 2P', cursive;
 }
 
 .catBody {
-    background-image: url(../assets/cat.png);
+    background-image: url(./assets/cat.png);
     background-repeat: no-repeat;
     width: 500px;
     display: grid;
@@ -33,6 +33,7 @@ body {
 
 .butthole {
     position: absolute;
+    border: 2px red solid;
     left: 74%;
     top: 60%;
     height: 20px;
@@ -57,24 +58,28 @@ i{
     width: 230px;
     height: 250px;
     grid-area: head;
+    background-color: pink;
+    opacity: 50%;
 }
 
 .back {
-    width: 100px;
-    height: 250px;
     grid-area: back;
+    background-color: orange;
+    opacity: 50%;
 }
 
 .tail {
-    width: 200px;
-    height: 250px;
     grid-area: tail;
+    background-color: teal;
+    opacity: 50%;
 }
 
 .frontLegs {
     width: 230px;
     height: 200px;
     grid-area: frontLegs;
+    background-color: green;
+    opacity: 50%;
 }
 
 .belly {
@@ -82,6 +87,8 @@ i{
     height: 200px;
     opacity: 50%;
     grid-area: belly;
+    background-color: purple;
+    opacity: 50%;
 }
 
 .backLegs {
@@ -89,6 +96,8 @@ i{
     height: 200px;
     opacity: 50%;
     grid-area: backLegs;
+    background-color: palevioletred;
+    opacity: 50%;
 }
 
 .happiness,
@@ -104,7 +113,7 @@ h1 {
     font-family: 'Bungee Shade', cursive;
     font-size: 4rem;
     text-align: center;
-    margin: 2%;
+    margin: 2% auto;
     i{
         font-size: 3.5rem;
     }
@@ -146,7 +155,7 @@ ul {
     li {
         font-size: 1rem;
         line-height: 2rem;
-        padding-left: 40px;
+        padding: 5px 10px;
     }
     span{
         background: pink;
@@ -156,7 +165,7 @@ ul {
 }
 
 footer {
-    margin-top: 5%;
+    margin-top: 15%;
     color: black;
     text-align: center;
     p {

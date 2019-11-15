@@ -13,13 +13,12 @@
 </head>
 
 <body>
-
-    <h1><i class="fas fa-star"></i>FELINE FEELING<i class="fas fa-star"></i></h1>
-    <div class="happiness"></div>
-    <div class="buttToucher">
-        <h2>HAPPINESS: -1000</h2>
-    </div>
     <div class="wrapper">
+        <h1><i class="fas fa-star"></i>FELINE FEELING<i class="fas fa-star"></i></h1>
+        <div class="happiness"></div>
+        <div class="buttToucher">
+            <h2>HAPPINESS: -1000</h2>
+        </div>
         <!--remember alt text-->
         <div class="instructions">
             <h2>INSTRUCTIONS</h2>
@@ -39,29 +38,31 @@
             <div class="backLegs" data-part="backLegs"></div>
             <div class="butthole" id="butthole" data-part="butthole"><span>butthole</span></div>
         </div>
+
+        <div class="winningScreen" id="winningScreen">
+            <h2>YOU WIN!</h2>
+            <img src="./assets/cat-winning.gif">
+        </div>
+
+        <div class="losingScreen">
+            <img src="./assets/cat-sad.gif">
+        </div>
+
+
+
+        <div class="buttToucher">
+            <h2>You touched the butthole..</h2>
+        </div>
+
+        <button id="start" class="vibrate">start game</button>
+
+        <div class="timer" id="timer"></div>
+        <footer>
+            <p>Game & assets made with 💗 by Negin Sauermann</p>
+        </footer>
     </div>
 
-    <div class="winningScreen" id="winningScreen">
-        <h2>YOU WIN!</h2>
-        <img src="./assets/cat-winning.gif">
-    </div>
 
-    <div class="losingScreen">
-        <img src="./assets/cat-sad.gif">
-    </div>
-
-
-
-    <div class="buttToucher">
-        <h2>You touched the butthole..</h2>
-    </div>
-
-    <button id="start" class="vibrate">start game</button>
-
-    <div class="timer" id="timer"></div>
-    <footer>
-        <p>Game & assets made with 💗 by Negin Sauermann</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

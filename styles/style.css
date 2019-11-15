@@ -192,12 +192,12 @@ img {
 }
 
 body {
-  size: 62.5%;
+  font-size: 62.5%;
   font-family: 'Press Start 2P', cursive;
 }
 
 .catBody {
-  background-image: url(../assets/cat.png);
+  background-image: url(./assets/cat.png);
   background-repeat: no-repeat;
   width: 500px;
   display: -ms-grid;
@@ -219,6 +219,7 @@ body {
 
 .butthole {
   position: absolute;
+  border: 2px red solid;
   left: 74%;
   top: 60%;
   height: 20px;
@@ -246,22 +247,24 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+  background-color: pink;
+  opacity: 50%;
 }
 
 .back {
-  width: 100px;
-  height: 250px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
+  background-color: orange;
+  opacity: 50%;
 }
 
 .tail {
-  width: 200px;
-  height: 250px;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
+  background-color: teal;
+  opacity: 50%;
 }
 
 .frontLegs {
@@ -270,6 +273,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
+  background-color: green;
+  opacity: 50%;
 }
 
 .belly {
@@ -279,6 +284,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
+  background-color: purple;
+  opacity: 50%;
 }
 
 .backLegs {
@@ -288,6 +295,8 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
+  background-color: palevioletred;
+  opacity: 50%;
 }
 
 .happiness,
@@ -302,7 +311,7 @@ h1 {
   font-family: 'Bungee Shade', cursive;
   font-size: 4rem;
   text-align: center;
-  margin: 2%;
+  margin: 2% auto;
 }
 
 h1 i {
@@ -348,7 +357,7 @@ ul {
 ul li {
   font-size: 1rem;
   line-height: 2rem;
-  padding-left: 40px;
+  padding: 5px 10px;
 }
 
 ul span {
@@ -358,7 +367,7 @@ ul span {
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: 15%;
   color: black;
   text-align: center;
 }
@@ -684,5 +693,40 @@ footer p {
     -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 3rem;
+  }
+  ul {
+    width: 70%;
+    padding: 5px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 645px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h1 i {
+    font-size: 2rem;
+  }
+  ul li {
+    font-size: .75rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 530px) {
+  ul {
+    width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+  }
+  .catBody {
+    background-size: 80%;
   }
 }

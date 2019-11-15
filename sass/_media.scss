@@ -1,0 +1,39 @@
+@media (max-width: 850px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    ul {
+        width: 70%;
+        padding: 5px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 645px) {
+    h1 {
+        font-size: 2rem;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+    ul li{
+        font-size: .75rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 530px) {
+
+    ul{
+        width: 80%;
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    .catBody{
+        background-size: 80%; 
+    }
+
+}
