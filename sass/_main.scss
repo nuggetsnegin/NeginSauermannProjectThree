@@ -1,3 +1,5 @@
+
+
 .wrapper {
     margin: 0 auto;
     max-width: 500px;
@@ -26,7 +28,7 @@ body {
     margin: 0 auto;
 
     &:hover {
-        cursor: pointer;
+        cursor: grab;
     }
 }
 
@@ -36,7 +38,6 @@ body {
     top: 64%;
     height: 20px;
     width: 20px;
-    // border: 1px solid red;
     span {
         display: none;
     }

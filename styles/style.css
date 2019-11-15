@@ -213,7 +213,8 @@ body {
 }
 
 .catBody:hover {
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .butthole {

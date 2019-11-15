@@ -60,7 +60,7 @@ $(function () {
                 $('.catBody').show();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 30;
+                catGame.timer = 3000;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
@@ -187,13 +187,14 @@ $(function () {
     from the array! changing the css bg image! 
 */
     const randomCat = () =>{
-        let catImage = ['cat.png', 'cat-2.png'];
+        let catImage = ['cat-1.png', 'cat-3.png', 'cat-4.png', 'cat-5.png', 'cat-6.png', 'cat-7.png', 'cat-8.png', 'cat-9.png'];
         $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
     }
 
 
     /*[AUDIO AS GLOBAL VARIABLES]
-        Audio from:
+        Audio from: Wario Land 3, Kirby SuperStar, Animal Crossing N64,
+        and Cave Story.
     */
     let audio = document.createElement('audio');
     audio.setAttribute('src', './assets/wario.mp3');
