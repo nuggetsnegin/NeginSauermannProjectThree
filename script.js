@@ -60,7 +60,7 @@ $(function () {
                 $('.catBody').show();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 3000;
+                catGame.timer = 30;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
