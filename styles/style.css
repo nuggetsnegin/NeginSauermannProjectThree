@@ -233,6 +233,8 @@ i {
   font-size: 2.5rem;
   color: pink;
   padding: 2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
 .buttToucher {
@@ -289,6 +291,7 @@ i {
 
 .happiness,
 .timer {
+  color: black;
   text-align: center;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -334,6 +337,7 @@ button:hover {
 .winningScreen,
 .losingScreen {
   display: none;
+  margin: 30% 0;
 }
 
 ul {
