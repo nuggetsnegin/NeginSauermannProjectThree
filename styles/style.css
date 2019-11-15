@@ -197,7 +197,7 @@ body {
 }
 
 .catBody {
-  background-image: url(../assets/cat.png);
+  background-image: url(../assets/cat-1.png);
   background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
@@ -218,8 +218,8 @@ body {
 
 .butthole {
   position: absolute;
-  left: 74%;
-  top: 60%;
+  left: 87%;
+  top: 64%;
   height: 20px;
   width: 20px;
 }
@@ -240,65 +240,50 @@ i {
 }
 
 .head {
-  width: 230px;
-  height: 250px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: head;
-  background-color: pink;
-  opacity: 50%;
+  width: 240px;
+  height: 350px;
 }
 
 .back {
   width: 100px;
-  height: 250px;
+  height: 350px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
-  background-color: blue;
-  opacity: 50%;
 }
 
 .tail {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 350px;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
-  background-color: green;
-  opacity: 50%;
 }
 
 .frontLegs {
-  width: 230px;
-  height: 200px;
+  width: 240px;
+  height: 150px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
-  background-color: orange;
-  opacity: 50%;
 }
 
 .belly {
   width: 100px;
-  height: 200px;
+  height: 100px;
   opacity: 50%;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
-  background-color: teal;
-  opacity: 50%;
 }
 
 .backLegs {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   opacity: 50%;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
-  background-color: purple;
-  opacity: 50%;
 }
 
 .happiness,
