@@ -205,6 +205,11 @@ body {
   cursor: pointer;
 }
 
+area {
+  display: block;
+  background-color: red;
+}
+
 .butthole {
   position: absolute;
   border: 2px red solid;
