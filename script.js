@@ -3,6 +3,8 @@ $(function () {
         Initialize happiness level, cat body part array, 
         favoriteBody part, correctPetCount counter and timer.
     */
+
+    /*to do randomize array for cat images*/
     const catGame = {
         happiness: 0,
         catBody: ['head', 'back', 'tail', 'frontLegs', 'belly', 'backLegs'],
@@ -51,6 +53,7 @@ $(function () {
         */
         start: function () {
             $(catGame.button).on('click touchstart', function () {
+                randomCat();
                 gameOver.pause();
                 gameWin.pause();
                 audio.play();
@@ -141,6 +144,7 @@ $(function () {
                     console.log(`wrong body part`);
                     checkHappiness();
                     $('.catBody').addClass('no');
+                    $('.catBody').css('background-image', 'url(./assets/cat-2.png)');
                 } else console.log('error');
             })
         };
@@ -176,6 +180,12 @@ $(function () {
         }
 
     }
+
+    const randomCat = () =>{
+        let catImage = ['cat.png', 'cat-2.png'];
+        $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
+    }
+
 
     /*[AUDIO AS GLOBAL VARIABLES]
         Audio from:

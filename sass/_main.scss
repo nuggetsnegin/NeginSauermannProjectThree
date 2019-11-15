@@ -141,7 +141,7 @@ button {
 
 ul {
     border: 3px dashed black;
-    padding: 10px;
+    padding: 20px;
     list-style: none;
 
     li {
@@ -157,10 +157,9 @@ ul {
 }
 
 footer {
+    margin-top: 5%;
     color: black;
     text-align: center;
-    background-color: pink;
-
     p {
         padding: 5px;
         margin: 0;
