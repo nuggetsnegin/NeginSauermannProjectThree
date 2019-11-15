@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Feline Feeling</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -13,8 +14,8 @@
 <body>
 
     <h1>FELINE FEELING</h1>
-    <div class="timer" id="timer"></div>
     <div class="happiness"></div>
+    <div class="buttToucher"><h2>HAPPINESS: -1000</h2></div>
     <div class="wrapper">
         <!--remember alt text-->
         <div class="instructions">
@@ -22,8 +23,7 @@
             <ul>
                 <li>You have 15 seconds to find spots the cat likes being touched!</li>
                 <li>Cats are finnicky, so the spot will change each time.</li>
-                <li>If you touch the cat 10 times in the right spot - it's yours!</li>
-                <li>If not, it'll run away. 😨</li>
+                <li>If you touch the cat 3 times in the right spot - it's yours!</li>
                 <li>Absolutely do NOT touch the cat's butthole!</li>
             </ul>
         </div>
@@ -47,7 +47,10 @@
         <img src="./assets/cat-sad.gif">
     </div>
 
-    <button id="start">start game</button>
+    <button id="start" class="vibrate">start game</button>
+
+    <div class="timer" id="timer"></div>
+    <footer><p>Game & assets made with 💗 by Negin Sauermann</p></footer>
 
     <script src="script.js"></script>
 </body>

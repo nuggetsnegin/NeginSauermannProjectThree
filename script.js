@@ -1,4 +1,9 @@
 $(function () {
+    let audio = document.createElement('audio');
+    audio.setAttribute('src', './assets/gameSong.mp3');
+    let dead = document.createElement('audio');
+    dead.setAttribute('src', './assets/died.mp3');
+
 
     /*[CAT GAME OBJECT]
         Initialize happiness level, cat body part array, 
@@ -52,11 +57,11 @@ $(function () {
         */
         start: function () {
             $(catGame.button).on('click touchstart', function () {
-                console.log('am i working');
+                audio.play();
                 $('.catBody').show();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 100;
+                catGame.timer = 15;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
@@ -64,12 +69,14 @@ $(function () {
             });
         },
         /*[HIDE METHOD]
-            Elements to hide when using starting game.
+            Elements to hide when user starts game.
         */
         hide: function () {
             $('.instructions').hide();
             $('.winningScreen').hide();
             $('.losingScreen').hide();
+            $('footer').hide();
+            $('.buttToucher').hide();
             $(catGame.button).hide(); /*so user doesnt spam button*/
         },
         /*[RESET METHOD]
@@ -80,6 +87,10 @@ $(function () {
             clearTimeout(catGame.timerSpeed); /*stop timer*/
             $(catGame.button).show().text('play again?');
             $('.happiness').html(""); /*clear appended happiness so it does not stack*/
+            audio.pause();
+            $('.catBody').removeClass('youDidABadThing');
+            $('.catBody').removeClass('yes');
+            $('.catBody').removeClass('no');
         },
         /*[INIT METHOD]
             When we load page, hide the cat body call
@@ -104,35 +115,36 @@ $(function () {
     */
     const feelingFeline = () => {
 
-        $('.catBody').on("animationend", function(){
-            $(this).removeClass('no yes');
+        $('.catBody').on("animationend", function () {
+            $(this).removeClass('no yes youDidABadThing');
         });
 
         for (let i = 0; i < catGame.catBodyPart.length; i++) {
-           $(catGame.catBodyPart[i]).on('click touchstart', function () {
+            $(catGame.catBodyPart[i]).on('click touchstart', function () {
 
                 let petting = $(catGame.catBodyPart[i]).data().part;
                 console.log(petting);
                 if (petting === catGame.favoriteBodyPart) {
                     $('.catBody').addClass('yes');
-                    catGame.correctPetCount++; 
-                    catGame.happiness++; 
+                    catGame.correctPetCount++;
+                    catGame.happiness++;
                     $('.happiness').append(`💗`);
                     checkHappiness();
                     changeFavoriteSpot();
-                    
+
                 } else if (petting === catGame.butthole) {
                     /*touched the butt*/
                     catGame.happiness = -1000;
-                    catGame.timerDiv.innerHTML = `HAPPINESS: - 1000 😱!`;
+                    $('.buttToucher').show();
+                    dead.play();
+                    $('.catBody').addClass('youDidABadThing').fadeOut();
                     checkHappiness();
 
                 } else if (petting !== catGame.favoriteBodyPart) {
                     console.log(`wrong body part`);
                     checkHappiness();
                     $('.catBody').addClass('no');
-                }
-                else console.log('error');
+                } else console.log('error');
             })
         };
     }
@@ -141,7 +153,6 @@ $(function () {
         Check to see if happiness level is max -> game win screen & call reset.
         Else check to see if happiness level is negative -> touched the butthole
         and end the game and call reset. 
-        Lastly, prevent user from being able to click/touch on cat body using off().
     */
     const checkHappiness = () => {
         if (catGame.happiness === 3) {
@@ -166,6 +177,5 @@ $(function () {
         }
 
     }
-
     catGame.init();
 });
