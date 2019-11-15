@@ -144,7 +144,6 @@ $(function () {
                     console.log(`wrong body part`);
                     checkHappiness();
                     $('.catBody').addClass('no');
-                    $('.catBody').css('background-image', 'url(./assets/cat-2.png)');
                 } else console.log('error');
             })
         };
