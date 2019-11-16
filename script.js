@@ -187,7 +187,7 @@ $(function () {
     from the array! changing the css bg image! 
 */
     const randomCat = () =>{
-        let catImage = ['cat-1.png', 'cat-3.png', 'cat-4.png', 'cat-5.png', 'cat-6.png', 'cat-7.png', 'cat-8.png', 'cat-9.png'];
+        let catImage = ['cat-1.png', 'cat-2.png', 'cat-3.png', 'cat-4.png', 'cat-5.png', 'cat-7.png'];
         $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
     }
 
