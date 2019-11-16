@@ -24,7 +24,6 @@ body {
         "head back tail"
         "frontLegs belly backLegs";
     margin: 0 auto;
-
     &:hover {
         cursor: grab;
     }
@@ -32,10 +31,10 @@ body {
 
 .butthole {
     position: absolute;
-    left: 87%;
-    top: 70%;
-    height: 20px;
-    width: 20px;
+    left: 88%;
+    top: 72%;
+    height: 22px;
+    width: 22px;
     border: 1px solid red;
 
     span {
@@ -57,16 +56,16 @@ i {
 }
 
 .head {
-    width: 240px;
-    height: 350px;
+    width: 230px;
+    height: 330px;
     grid-area: head;
     background-color: pink;
     opacity: 50%;
 }
 
 .back {
-    width: 100px;
-    height: 350px;
+    width: 160px;
+    height: 330px;
     grid-area: back;
     background-color: blue;
     opacity: 50%;
@@ -74,32 +73,27 @@ i {
 
 .tail {
     width: 150px;
-    height: 350px;
+    height: 330px;
     grid-area: tail;
     background-color: green;
-    opacity: 50%;
+    opacity: 50%; 
 }
 
 .frontLegs {
-    width: 240px;
-    height: 150px;
     grid-area: frontLegs;
     background-color: orange;
     opacity: 50%;
+    height: 160px;
 }
 
 .belly {
-    width: 100px;
-    height: 100px;
-    opacity: 50%;
+
     grid-area: belly;
     background-color: teal;
     opacity: 50%;
 }
 
 .backLegs {
-    width: 150px;
-    height: 150px;
     opacity: 50%;
     grid-area: backLegs;
     background-color: purple;

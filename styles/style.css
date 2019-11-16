@@ -219,10 +219,10 @@ body {
 
 .butthole {
   position: absolute;
-  left: 87%;
-  top: 70%;
-  height: 20px;
-  width: 20px;
+  left: 88%;
+  top: 72%;
+  height: 22px;
+  width: 22px;
   border: 1px solid red;
 }
 
@@ -244,8 +244,8 @@ i {
 }
 
 .head {
-  width: 240px;
-  height: 350px;
+  width: 230px;
+  height: 330px;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
@@ -254,8 +254,8 @@ i {
 }
 
 .back {
-  width: 100px;
-  height: 350px;
+  width: 160px;
+  height: 330px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
@@ -265,7 +265,7 @@ i {
 
 .tail {
   width: 150px;
-  height: 350px;
+  height: 330px;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
@@ -274,19 +274,15 @@ i {
 }
 
 .frontLegs {
-  width: 240px;
-  height: 150px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
   background-color: orange;
   opacity: 50%;
+  height: 160px;
 }
 
 .belly {
-  width: 100px;
-  height: 100px;
-  opacity: 50%;
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
@@ -295,8 +291,6 @@ i {
 }
 
 .backLegs {
-  width: 150px;
-  height: 150px;
   opacity: 50%;
   -ms-grid-row: 2;
   -ms-grid-column: 3;

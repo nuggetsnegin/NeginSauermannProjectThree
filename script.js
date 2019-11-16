@@ -22,6 +22,7 @@ $(function () {
                 catGame.reset();
                 catGame.timerDiv.innerHTML = `<h2> out of time! </h2>`;
                 $('.losingScreen').show();
+                gameOver.play();
                 $('.catBody').hide();
             } else {
                 catGame.timerDiv.innerHTML = `<h2> ${catGame.timer} seconds remaining</h2>`;
@@ -60,7 +61,7 @@ $(function () {
                 $('.catBody').show();
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
-                catGame.timer = 30;
+                catGame.timer = 3000;
                 catGame.happiness = 0; /*what happens if I dont set it to 0?*/
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
