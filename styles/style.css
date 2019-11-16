@@ -278,7 +278,6 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
-  border: 2px solid red;
 }
 
 .backLegs {
