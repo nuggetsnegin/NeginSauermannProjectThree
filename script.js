@@ -56,6 +56,7 @@ $(function () {
         start: function () {
             $(catGame.button).on('click touchstart', function () {
                 randomCat();
+                createjs.Sound.play("sound");
                 gameOver.pause();
                 gameWin.pause();
                 audio.play();
@@ -211,6 +212,17 @@ $(function () {
     gameOver.setAttribute('src', './assets/gameOver.mp3');
     let gameWin = document.createElement('audio');
     gameWin.setAttribute('src', './assets/kirby.mp3');
+
+
+    createjs.Sound.alternateExtensions = ["mp3"];
+    createjs.Sound.on("fileload", this.loadHandler, this);
+    createjs.Sound.registerSound("./assets/wario.mp3", "sound");
+    function loadHandler(event) {
+        // This is fired for each sound that is registered.
+        let instance = createjs.Sound.play("sound");  // play using id.  Could also use full sourcepath or event.src.
+        instance.on("complete", this.handleComplete, this);
+        instance.volume = 0.5;
+    }
 
     catGame.init();
 
