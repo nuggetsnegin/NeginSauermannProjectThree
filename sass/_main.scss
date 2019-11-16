@@ -54,9 +54,11 @@ button {
     border-radius: 25px;
     text-transform: uppercase;
     margin: 1% auto;
-
     &:hover {
         background-color: $accent-color;
+    }
+    &:focus{
+        border: 1px dashed $accent-color;
     }
 }
 
@@ -92,6 +94,9 @@ ul {
     margin: 0 auto;
     &:hover {
         cursor: grab;
+    }
+    &:focus{
+        border: 1px dashed $accent-color;
     }
 }
 

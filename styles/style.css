@@ -242,6 +242,10 @@ button:hover {
   background-color: #ff95ae;
 }
 
+button:focus {
+  border: 1px dashed #ff95ae;
+}
+
 ul {
   border: 3px dashed #222222;
   padding: 20px;
@@ -280,6 +284,10 @@ ul span {
 .catBody:hover {
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+.catBody:focus {
+  border: 1px dashed #ff95ae;
 }
 
 .butthole {
