@@ -223,7 +223,6 @@ body {
   top: 72%;
   height: 22px;
   width: 22px;
-  border: 1px solid red;
 }
 
 .butthole span {
@@ -249,8 +248,6 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
-  background-color: pink;
-  opacity: 50%;
 }
 
 .back {
@@ -259,8 +256,6 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
-  background-color: blue;
-  opacity: 50%;
 }
 
 .tail {
@@ -269,16 +264,12 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
-  background-color: green;
-  opacity: 50%;
 }
 
 .frontLegs {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: frontLegs;
-  background-color: orange;
-  opacity: 50%;
   height: 160px;
 }
 
@@ -286,16 +277,12 @@ i {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
-  background-color: teal;
-  opacity: 50%;
 }
 
 .backLegs {
-  opacity: 50%;
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
-  background-color: purple;
 }
 
 .happiness,

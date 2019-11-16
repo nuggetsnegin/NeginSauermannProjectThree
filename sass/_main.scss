@@ -35,8 +35,6 @@ body {
     top: 72%;
     height: 22px;
     width: 22px;
-    border: 1px solid red;
-
     span {
         display: none;
     }
@@ -59,44 +57,31 @@ i {
     width: 230px;
     height: 330px;
     grid-area: head;
-    background-color: pink;
-    opacity: 50%;
 }
 
 .back {
     width: 160px;
     height: 330px;
     grid-area: back;
-    background-color: blue;
-    opacity: 50%;
 }
 
 .tail {
     width: 150px;
     height: 330px;
     grid-area: tail;
-    background-color: green;
-    opacity: 50%; 
 }
 
 .frontLegs {
     grid-area: frontLegs;
-    background-color: orange;
-    opacity: 50%;
     height: 160px;
 }
 
 .belly {
-
     grid-area: belly;
-    background-color: teal;
-    opacity: 50%;
 }
 
 .backLegs {
-    opacity: 50%;
     grid-area: backLegs;
-    background-color: purple;
 }
 
 .happiness,
