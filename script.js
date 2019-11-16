@@ -99,6 +99,8 @@ $(function () {
             catGame.domGetter();
             catGame.start();
             feelingFeline();
+            audio.play();
+            audio.pause();
         }
     }
 
