@@ -3,9 +3,6 @@ $(function () {
         Initialize happiness level, cat body part array, 
         favoriteBody part, correctPetCount counter and timer.
     */
-
-
-    /*to do randomize array for cat images*/
     const catGame = {
         happiness: 0,
         catBody: ['head', 'back', 'tail', 'frontLegs', 'belly', 'backLegs'],
@@ -56,7 +53,6 @@ $(function () {
         start: function () {
             $(catGame.button).on('click touchstart', function () {
                 randomCat();
-                createjs.Sound.play("sound");
                 gameOver.pause();
                 gameWin.pause();
                 audio.play();
@@ -64,7 +60,7 @@ $(function () {
                 catGame.setRandomBody();
                 catGame.timerSpeed = setInterval(catGame.countdown, 1000); /*1 second countdown speed*/
                 catGame.timer = 30;
-                catGame.happiness = 0; /*what happens if I dont set it to 0?*/
+                catGame.happiness = 0;
                 $('.happiness').show();
                 $('.happiness').append(`Happiness: `);
                 catGame.hide();
@@ -125,7 +121,6 @@ $(function () {
             $(catGame.catBodyPart[i]).on('click touchstart', function () {
 
                 let petting = $(catGame.catBodyPart[i]).data().part;
-                console.log(petting);
                 if (petting === catGame.favoriteBodyPart) {
                     $('.catBody').addClass('yes');
                     catGame.correctPetCount++;
@@ -144,11 +139,9 @@ $(function () {
                     checkHappiness();
 
                 } else if (petting !== catGame.favoriteBodyPart) {
-                    console.log(`wrong body part`);
                     checkHappiness();
                     $('.catBody').addClass('no');
-                    // $('.catBody').css('background-image', 'url(./assets/cat-2.png)');
-                } else console.log('error');
+                }
             })
         };
     }
@@ -213,16 +206,6 @@ $(function () {
     let gameWin = document.createElement('audio');
     gameWin.setAttribute('src', './assets/kirby.mp3');
 
-
-    createjs.Sound.alternateExtensions = ["mp3"];
-    createjs.Sound.on("fileload", this.loadHandler, this);
-    createjs.Sound.registerSound("./assets/wario.mp3", "sound");
-    function loadHandler(event) {
-        // This is fired for each sound that is registered.
-        let instance = createjs.Sound.play("sound");  // play using id.  Could also use full sourcepath or event.src.
-        instance.on("complete", this.handleComplete, this);
-        instance.volume = 0.5;
-    }
 
     catGame.init();
 
