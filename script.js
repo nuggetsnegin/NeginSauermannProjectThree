@@ -212,16 +212,6 @@ $(function () {
     let gameWin = document.createElement('audio');
     gameWin.setAttribute('src', './assets/kirby.mp3');
 
-        /*test*/
-        const initSound = function () {
-            sprite.play();
-            setTimeout(function () {
-                sprite.stop();
-            }, 0);
-            document.removeEventListener('touchstart', initSound, false);
-        }
-        document.addEventListener('touchstart', initSound, false);
-
     catGame.init();
 
 });
