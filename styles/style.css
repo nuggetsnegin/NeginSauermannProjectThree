@@ -223,6 +223,7 @@ body {
   top: 72%;
   height: 22px;
   width: 22px;
+  border: 2px solid red;
 }
 
 .butthole span {
@@ -248,6 +249,7 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+  border: 2px solid red;
 }
 
 .back {
@@ -256,6 +258,7 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
+  border: 2px solid red;
 }
 
 .tail {
@@ -264,6 +267,7 @@ i {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
+  border: 2px solid red;
 }
 
 .frontLegs {
@@ -271,18 +275,21 @@ i {
   -ms-grid-column: 1;
   grid-area: frontLegs;
   height: 160px;
+  border: 2px solid red;
 }
 
 .belly {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
+  border: 2px solid red;
 }
 
 .backLegs {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
+  border: 2px solid red;
 }
 
 .happiness,
@@ -832,45 +839,45 @@ footer i {
   }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 510px) {
   ul {
     width: 80%;
     padding: 5px;
     margin: 0 auto;
   }
   .catBody {
-    background-size: 70%;
+    background-size: contain;
     margin-top: 10%;
     margin-left: 15%;
   }
   .head {
-    width: 100px;
-    height: 150px;
+    width: 170px;
+    height: 200px;
   }
   .back {
     width: 70px;
-    height: 150px;
+    height: 200px;
   }
   .tail {
-    width: 40px;
-    height: 150px;
+    width: 60px;
+    height: 200px;
   }
   .backLegs,
   .frontLegs,
   .belly {
-    height: 60px;
+    height: 90px;
   }
   .backLegs {
-    width: 40px;
+    width: 50px;
   }
   .butthole {
-    left: 60%;
-    top: 68%;
+    left: 255px;
+    top: 200px;
     width: 15px;
     height: 15px;
   }
   .wrapper {
-    width: 300px;
+    max-width: 500px;
   }
 }
 
@@ -880,6 +887,7 @@ footer i {
   }
   h1 {
     font-size: 1.5rem;
+    margin-top: 7%;
     margin-bottom: 10px;
   }
   h1 i {

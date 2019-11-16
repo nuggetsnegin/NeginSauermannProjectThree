@@ -35,6 +35,7 @@ body {
     top: 72%;
     height: 22px;
     width: 22px;
+    border: 2px solid red;
     span {
         display: none;
     }
@@ -57,31 +58,37 @@ i {
     width: 230px;
     height: 330px;
     grid-area: head;
+    border: 2px solid red;
 }
 
 .back {
     width: 160px;
     height: 330px;
     grid-area: back;
+    border: 2px solid red;
 }
 
 .tail {
     width: 150px;
     height: 330px;
     grid-area: tail;
+    border: 2px solid red;
 }
 
 .frontLegs {
     grid-area: frontLegs;
     height: 160px;
+    border: 2px solid red;
 }
 
 .belly {
     grid-area: belly;
+    border: 2px solid red;
 }
 
 .backLegs {
     grid-area: backLegs;
+    border: 2px solid red;
 }
 
 .happiness,
