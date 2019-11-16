@@ -55,6 +55,7 @@ $(function () {
                 randomCat();
                 gameOver.pause();
                 gameWin.pause();
+                setTimeout(() => audio.play(), 0);
                 audio.play();
                 $('.catBody').show();
                 catGame.setRandomBody();
