@@ -4,6 +4,7 @@ $(function () {
         favoriteBody part, correctPetCount counter and timer.
     */
 
+
     /*to do randomize array for cat images*/
     const catGame = {
         happiness: 0,
@@ -182,14 +183,16 @@ $(function () {
 
     }
 
- /*[RANDOM CAT]
+    /*[RANDOM CAT]
     Randomizing cat images using an array of
     cat images and using math.random + floor based and grabbing
     from the array! changing the css bg image! 
 */
-    const randomCat = () =>{
+    const randomCat = () => {
         let catImage = ['cat-1.png', 'cat-2.png', 'cat-3.png', 'cat-4.png', 'cat-5.png', 'cat-7.png'];
-        $('.catBody').css({'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'});
+        $('.catBody').css({
+            'background-image': 'url(./assets/' + catImage[Math.floor(Math.random() * catImage.length)] + ')'
+        });
     }
 
 
@@ -199,7 +202,7 @@ $(function () {
     */
     let audio = document.createElement('audio');
     audio.setAttribute('src', './assets/wario.mp3');
-    audio.loop=true;
+    audio.loop = true;
     let dead = document.createElement('audio');
     dead.setAttribute('src', './assets/died.mp3');
     let meow = document.createElement('audio');
@@ -210,4 +213,13 @@ $(function () {
     gameWin.setAttribute('src', './assets/kirby.mp3');
 
     catGame.init();
+
+    const initSound = function () {
+        sprite.play();
+        setTimeout(function () {
+            sprite.stop();
+        }, 0);
+        document.removeEventListener('touchstart', initSound, false);
+    }
+    document.addEventListener('touchstart', initSound, false);
 });
