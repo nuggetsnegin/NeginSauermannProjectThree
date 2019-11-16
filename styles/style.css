@@ -820,9 +820,8 @@ footer i {
     font-size: 3rem;
   }
   ul {
-    width: 70%;
     padding: 5px;
-    margin: 0 auto;
+    margin: 2% auto;
   }
 }
 
@@ -848,7 +847,7 @@ footer i {
   .catBody {
     background-size: contain;
     margin-top: 10%;
-    margin-left: 15%;
+    margin-left: 10%;
   }
   .head {
     width: 170px;
@@ -887,8 +886,7 @@ footer i {
   }
   h1 {
     font-size: 1.5rem;
-    margin-top: 7%;
-    margin-bottom: 10px;
+    margin: 5% auto;
   }
   h1 i {
     font-size: 1rem;
@@ -898,5 +896,11 @@ footer i {
   }
   h2 {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .catBody {
+    margin-left: 5%;
   }
 }
