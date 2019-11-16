@@ -179,6 +179,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+/*MAIN*/
 .wrapper {
   margin: 0 auto;
   max-width: 500px;
@@ -197,6 +198,69 @@ body {
   color: #222222;
 }
 
+i {
+  font-size: 2.5rem;
+  color: #ff95ae;
+  padding: 2px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #222222;
+}
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1% auto;
+}
+
+h1 i {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  background-color: #222222;
+  border: none;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  margin: 1% auto;
+}
+
+button:hover {
+  background-color: #ff95ae;
+}
+
+ul {
+  border: 3px dashed #222222;
+  padding: 20px;
+  list-style: none;
+}
+
+ul li {
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: 5px 10px;
+}
+
+ul span {
+  background: #ff95ae;
+  padding: 5px;
+  opacity: 80%;
+}
+
+/*CAT BODY PARTS*/
 .catBody {
   background-image: url(../assets/cat-1.png);
   background-repeat: no-repeat;
@@ -228,19 +292,6 @@ body {
 
 .butthole span {
   display: none;
-}
-
-i {
-  font-size: 2.5rem;
-  color: #ff95ae;
-  padding: 2px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #222222;
-}
-
-.buttToucher {
-  display: none;
-  padding: 50px;
 }
 
 .head {
@@ -286,48 +337,13 @@ i {
   grid-area: backLegs;
 }
 
+/*PRE/POST SCREENS*/
 .happiness,
 .timer {
   text-align: center;
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 1%;
-}
-
-h1 {
-  font-family: 'Bungee Shade', cursive;
-  font-size: 3rem;
-  text-align: center;
-  margin: 1% auto;
-}
-
-h1 i {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-button {
-  background-color: #222222;
-  border: none;
-  color: white;
-  padding: 25px;
-  text-align: center;
-  text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-  border-radius: 25px;
-  text-transform: uppercase;
-  margin: 1% auto;
-}
-
-button:hover {
-  background-color: #ff95ae;
 }
 
 .winningScreen,
@@ -340,22 +356,9 @@ button:hover {
   width: 60%;
 }
 
-ul {
-  border: 3px dashed #222222;
-  padding: 20px;
-  list-style: none;
-}
-
-ul li {
-  font-size: 1rem;
-  line-height: 2rem;
-  padding: 5px 10px;
-}
-
-ul span {
-  background: #ff95ae;
-  padding: 5px;
-  opacity: 80%;
+.buttToucher {
+  display: none;
+  padding: 50px;
 }
 
 footer {
@@ -830,6 +833,7 @@ footer i {
   }
 }
 
+/*RESIZE CAT BODY SIZE TO BE RESPONSIVE (ORIGINAL 500PX)*/
 @media (max-width: 510px) {
   ul {
     width: 80%;

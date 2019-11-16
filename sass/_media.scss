@@ -24,6 +24,7 @@
     }
 }
 
+/*RESIZE CAT BODY SIZE TO BE RESPONSIVE (ORIGINAL 500PX)*/
 @media (max-width: 510px) {
 
     ul {
@@ -69,6 +70,7 @@
         width: 15px;
         height: 15px;
     }
+
     .wrapper {
         max-width: 500px;
     }
@@ -98,9 +100,8 @@
 
 }
 
-@media(max-width: 350px){
-    .catBody{
+@media(max-width: 350px) {
+    .catBody {
         margin-left: 5%;
     }
-
 }
