@@ -54,10 +54,12 @@ button {
     border-radius: 25px;
     text-transform: uppercase;
     margin: 1% auto;
+
     &:hover {
         background-color: $accent-color;
     }
-    &:focus{
+
+    &:focus {
         border: 1px dashed $accent-color;
     }
 }
@@ -92,10 +94,12 @@ ul {
         "head back tail"
         "frontLegs belly backLegs";
     margin: 0 auto;
+
     &:hover {
         cursor: grab;
     }
-    &:focus{
+
+    &:focus {
         border: 1px dashed $accent-color;
     }
 }
@@ -106,6 +110,7 @@ ul {
     top: 72%;
     height: 22px;
     width: 22px;
+
     span {
         display: none;
     }
@@ -154,7 +159,8 @@ ul {
 .winningScreen,
 .losingScreen {
     display: none;
-    img{
+
+    img {
         width: 60%;
     }
 }
@@ -164,6 +170,8 @@ ul {
     padding: 50px;
 }
 
+
+/*FOOTER*/
 footer {
     margin-top: 15%;
     text-align: center;
@@ -172,7 +180,8 @@ footer {
         padding: 5px;
         margin: 0;
     }
-    i{
+
+    i {
         font-size: .75rem;
     }
 }
