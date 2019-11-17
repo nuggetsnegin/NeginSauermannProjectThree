@@ -110,6 +110,7 @@ ul {
     top: 72%;
     height: 22px;
     width: 22px;
+    border: 2px solid green;
 
     span {
         display: none;
@@ -120,31 +121,37 @@ ul {
     width: 230px;
     height: 330px;
     grid-area: head;
+    border: 1px solid red;
 }
 
 .back {
     width: 160px;
     height: 330px;
     grid-area: back;
+    border: 1px solid red;
 }
 
 .tail {
     width: 150px;
     height: 330px;
     grid-area: tail;
+    border: 1px solid red;
 }
 
 .frontLegs {
     grid-area: frontLegs;
     height: 160px;
+    border: 1px solid red;
 }
 
 .belly {
     grid-area: belly;
+    border: 1px solid red;
 }
 
 .backLegs {
     grid-area: backLegs;
+    border: 1px solid red;
 }
 
 /*PRE/POST SCREENS*/

@@ -296,6 +296,7 @@ ul span {
   top: 72%;
   height: 22px;
   width: 22px;
+  border: 2px solid green;
 }
 
 .butthole span {
@@ -308,6 +309,7 @@ ul span {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
+  border: 1px solid red;
 }
 
 .back {
@@ -316,6 +318,7 @@ ul span {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: back;
+  border: 1px solid red;
 }
 
 .tail {
@@ -324,6 +327,7 @@ ul span {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tail;
+  border: 1px solid red;
 }
 
 .frontLegs {
@@ -331,18 +335,21 @@ ul span {
   -ms-grid-column: 1;
   grid-area: frontLegs;
   height: 160px;
+  border: 1px solid red;
 }
 
 .belly {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: belly;
+  border: 1px solid red;
 }
 
 .backLegs {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: backLegs;
+  border: 1px solid red;
 }
 
 /*PRE/POST SCREENS*/
@@ -369,6 +376,7 @@ ul span {
   padding: 50px;
 }
 
+/*FOOTER*/
 footer {
   margin-top: 15%;
   text-align: center;
@@ -906,5 +914,6 @@ footer i {
 @media (max-width: 350px) {
   .catBody {
     margin-left: 5%;
+    /*to center*/
   }
 }
