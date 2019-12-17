@@ -222,6 +222,17 @@ h2 {
   text-align: center;
 }
 
+.buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 button {
   background-color: #222222;
   border: none;
@@ -235,7 +246,6 @@ button {
   font-size: 1rem;
   border-radius: 25px;
   text-transform: uppercase;
-  margin: 1% auto;
 }
 
 button:hover {
@@ -390,8 +400,8 @@ footer i {
 }
 
 .vibrate {
-  -webkit-animation: vibrate-1 0.3s linear infinite both;
-  animation: vibrate-1 0.3s linear infinite both;
+  -webkit-animation: vibrate-1 0.5s linear infinite both;
+  animation: vibrate-1 0.5s linear infinite both;
 }
 
 .no {

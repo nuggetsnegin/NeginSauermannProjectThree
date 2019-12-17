@@ -42,6 +42,13 @@ h2 {
     text-align: center;
 }
 
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 button {
     background-color: $base-color;
     border: none;
@@ -53,7 +60,7 @@ button {
     font-size: 1rem;
     border-radius: 25px;
     text-transform: uppercase;
-    margin: 1% auto;
+    // margin: 1% auto;
 
     &:hover {
         background-color: $accent-color;
