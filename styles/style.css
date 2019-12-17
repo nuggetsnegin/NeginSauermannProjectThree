@@ -266,7 +266,7 @@ ul span {
 
 /*CAT BODY PARTS*/
 .catBody {
-  background-image: url(../assets/cat-1.png);
+  background-image: url(../assets/cat.png);
   background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
@@ -382,6 +382,11 @@ footer p {
 
 footer i {
   font-size: .75rem;
+}
+
+.catBody button {
+  background: transparent;
+  position: relative;
 }
 
 .vibrate {

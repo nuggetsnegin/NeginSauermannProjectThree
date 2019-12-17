@@ -84,7 +84,7 @@ ul {
 
 /*CAT BODY PARTS*/
 .catBody {
-    background-image: url(../assets/cat-1.png);
+    background-image: url(../assets/cat.png);
     background-repeat: no-repeat;
     display: grid;
     position: relative;
@@ -185,3 +185,18 @@ footer {
         font-size: .75rem;
     }
 }
+
+
+  .catBody button{
+    background: transparent;
+    position: relative;
+
+    // &:focus::after{
+    //     display: block;
+    //     z-index: 2;
+    //     content: url(/assets/hand.png);
+    //     position: absolute;
+    //     top: 5  0px;
+    // }
+  }
+
