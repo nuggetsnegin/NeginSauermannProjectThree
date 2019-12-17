@@ -296,13 +296,6 @@ ul span {
   cursor: grab;
 }
 
-.catBody:focus {
-  outline: none;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .butthole {
   position: absolute;
   left: 88%;
@@ -403,6 +396,8 @@ footer i {
 
 .catBody button:focus {
   border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .vibrate {
