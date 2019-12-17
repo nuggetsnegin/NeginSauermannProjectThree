@@ -107,7 +107,9 @@ ul {
     }
 
     &:focus {
-        border: 1px dashed $accent-color;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
     }
 }
 

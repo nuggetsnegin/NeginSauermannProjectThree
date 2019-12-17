@@ -297,7 +297,9 @@ ul span {
 }
 
 .catBody:focus {
-  border: 1px dashed #ff95ae;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .butthole {
