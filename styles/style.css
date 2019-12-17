@@ -297,7 +297,8 @@ ul span {
 }
 
 .catBody:focus {
-  border-color: inherit;
+  outline: none;
+  border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -398,7 +399,10 @@ footer i {
 
 .catBody button {
   background: transparent;
-  position: relative;
+}
+
+.catBody button:focus {
+  border: none;
 }
 
 .vibrate {

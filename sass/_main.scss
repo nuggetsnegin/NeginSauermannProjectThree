@@ -107,7 +107,8 @@ ul {
     }
 
     &:focus {
-        border-color: inherit;
+        outline: none;
+        border: none;
         -webkit-box-shadow: none;
         box-shadow: none;
     }
@@ -198,7 +199,10 @@ footer {
 
   .catBody button{
     background: transparent;
-    position: relative;
+
+    &:focus{
+        border: none;
+    }
 
     // &:focus::after{
     //     display: block;
