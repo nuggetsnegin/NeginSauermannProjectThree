@@ -190,14 +190,14 @@ footer {
 }
 
 
-  .catBody button{
-    background: transparent;
+//   .catBody button{
+//     background: transparent;
 
-    &:focus{
-        border: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
+//     &:focus{
+//         border: none;
+//         -webkit-box-shadow: none;
+//         box-shadow: none;
+//     }
 
     // &:focus::after{
     //     display: block;
@@ -206,5 +206,5 @@ footer {
     //     position: absolute;
     //     top: 5  0px;
     // }
-  }
+//   }
 

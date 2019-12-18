@@ -390,16 +390,6 @@ footer i {
   font-size: .75rem;
 }
 
-.catBody button {
-  background: transparent;
-}
-
-.catBody button:focus {
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .vibrate {
   -webkit-animation: vibrate-1 0.5s linear infinite both;
   animation: vibrate-1 0.5s linear infinite both;
