@@ -1,7 +1,7 @@
 # Feline Feeling
 ![Feline Feeling The Game](https://i.imgur.com/2Abe4S1.png)
 
-Quirky click or touch game where you have to find where the cat likes being pet in under 30 seconds! Features randomized petting spots as well as random cats(including Garfield)! Built with JavaScript, JQuery, HTML and CSS.
+Quirky click or touch game where you have to find where the cat likes being pet in under 30 seconds! Features randomized petting spots as well as random cats(including Garfield)! Built with JavaScript, jQuery, HTML5 and CSS3.
 [Live Link](https://nuggetsnegin.github.io/feline-feeling/)
 
 ## Built With
