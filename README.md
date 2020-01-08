@@ -17,7 +17,7 @@ Quirky click or touch game where you have to find where the cat likes being pet 
 
 
 ## Stretch Goals
-* Accessibility - currently requires a mouse on Desktop and is not fully accessible. Potential solution is to change game area from CSS Grid to map for the cat body to deal with tabbing/focus.
+* Accessibility - currently requires a mouse on desktop and is not fully accessible. Potential solution is to change game area from CSS Grid to map for the cat body to deal with tabbing/focus.
 * Leaderboard - implement a leaderboard system where user's best time is saved in a database (Firebase).
 
 ## Authors
