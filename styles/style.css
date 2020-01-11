@@ -206,6 +206,10 @@ i {
   -webkit-text-stroke-color: #222222;
 }
 
+h1, h2 {
+  text-transform: uppercase;
+}
+
 h1 {
   font-family: 'Bungee Shade', cursive;
   font-size: 3rem;
