@@ -22,4 +22,4 @@ Quirky click or touch game where you have to find where the cat likes being pet 
 
 ## Authors
 
-* **Negin Melina Sauermann** - [nuggetsnegin](https://github.com/nuggetsnegin)
+* **Negi** - [nuggetsnegin](https://github.com/nuggetsnegin)
